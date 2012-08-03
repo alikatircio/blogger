@@ -1,0 +1,40 @@
+tr:
+  tooltips:
+    new: Yeni
+    new_import: Import Excel
+    edit: Düzenle
+    add_picture: Resim ekle
+    show_picture: Resimleri göster
+    delete: Sil
+    show: Göster
+    back: Geri
+    change_password: Şifre değiştir
+  confirm: Emin misiniz?
+  accounts:
+    new:
+      sign_up_free: Ücretsiz üye olun
+  devise:
+    links:
+      sign_up_free: Ücretsiz üye ol
+      sign_in: Giriş yapın
+      forget_your_password: Şifrenizi mi unuttunuz?
+      didnt_receive_confirmation_instruction: Hesap onaylama mailiniz gelmedi mi?
+      didnt_receive_unlock_instructions: Hesap kilit açma mailiniz gelmedi mi?
+    confirmations:
+      new:
+        title: Onay mailini tekrar gönderme
+    passwords:
+      new:
+        title: Şifrenizi mi unuttunuz?
+      edit:
+        title:
+    sessions:
+      new:
+        title: coNinja'ya Giriş
+      new_admin:
+        title: Admin Giriş
+    unlocks:
+      new:
+        title: Kilit mailini tekrar gönderme
+  dashboard:
+    welcome:

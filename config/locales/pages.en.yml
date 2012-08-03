@@ -1,0 +1,74 @@
+en:
+  tooltips:
+    new: New
+    edit: Edit
+    delete: Delete
+    show: Show
+    back: Back
+    change_password: Change password
+  confirm: Are you sure?
+  accounts:
+    new:
+      sign_up_free: Sign up free
+  devise:
+    links:
+      sign_up_free: Sign up free
+      sign_in: Sign in
+      forget_your_password: Forgot your password?
+      didnt_receive_confirmation_instruction: Didn't receive confirmation instructions?
+      didnt_receive_unlock_instructions: Didn't receive unlock instructions?
+    confirmations:
+      new:
+        title: Resend confirmation instructions
+    passwords:
+      new:
+        title: Forgot your password?
+      edit:
+        title:
+    sessions:
+      new:
+        title: Sign in coNinja
+      new_admin:
+        title: Admin Sign in
+    unlocks:
+      new:
+        title: Resend unlock instructions
+  dashboard:
+    welcome:
+      amount: Amount
+      first_tasks: First you must do
+      define: should be define
+      update: should be update
+      routine: Routine Transactions
+      machine: Machine and operators activities.
+      engine: Machine engine time tracker.
+      kilometer: Machine kilometer tracker.
+      fuel: Fuel movements tracker.
+      support_html: You can ask any question from %{link} .
+      support_linktext: ticket module
+  reports:
+    machine_performances:
+      kilometer: Kilometer
+      engine_time: Engine time
+      fuel_amount: Fuel Amount
+      fuel_per_engine: Avg Fuel/Engine
+      fuel_per_kilometer: Avg Fuel/Kilometer
+  pages:
+    changelog:
+      new: new
+      inprogress: inprogress
+      done: done
+      changelog: Changelog
+      cl1: Add worksite module.
+      cl2: Add company module.
+      cl3: Add staff module.
+      cl4: Add tanker module.
+      cl5: Add machine module.
+      cl6: Add engine time module.
+      cl7: Add kilometer module.
+      cl8: Add machine activities module.
+      cl9: Add fuel movement module.
+      cl10: Add profile module.
+      cl11: Add report module.
+      cl12: Add changelog module.
+      cl13: Add ticket module.

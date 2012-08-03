@@ -1,0 +1,18 @@
+= title "Göktürkonline Üyelik"
+
+.row-fluid
+  .span7
+    = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :validate => true, :html => {:class => 'form-horizontal validate'}, :defaults => {:input_html => {:class => 'span10'}}) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :email, :required => true, :autofocus => true
+        = f.input :name, :required => true
+        = f.input :nickname, :required => true, :hint => "Küçük harflerden ve rakamlardan oluşur."
+        = f.input :gender, :collection => [['Bay', 1], ['Bayan', 0]], :selected => ['Bay', 1], :input_html => {:class => 'span3'}
+        = f.input :site_id, :collection => Site. where("id > 1"), :selected => Site.find(2).id
+        = f.input :password, :required => true
+        = f.input :password_confirmation, :required => true
+      .form-actions
+        = f.button :submit, "Üye Ol"
+    = render :partial => "devise/shared/links"
+  .span5
