@@ -1,0 +1,2 @@
+$("#comments-<%= @comment.post.id%>").append("<%= j render @comment %>");
+$('.comment-input-<%= @comment.post.id%>').val("");

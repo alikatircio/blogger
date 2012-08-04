@@ -1,5 +1,7 @@
 Blogger::Application.routes.draw do
 
+  resources :comments
+
   resources :posts
 
   namespace :admins do

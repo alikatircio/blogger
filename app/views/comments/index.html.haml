@@ -1,0 +1,13 @@
+= title t('tt.index', resource_name: Comment.model_name.human)
+
+- content_for :toolbar_left do
+  = link_to(new_comment_path, class: 'btn', rel: 'tooltip', title: t('tooltips.new')) do
+    %i.icon-plus
+
+
+%table.table.table-striped.table-bordered.table-condensed
+  %tr
+    %th Content
+  - @comments.each do |comment|
+    %tr
+      %td= comment.content

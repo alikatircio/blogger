@@ -13,10 +13,30 @@
           .row-fluid
             .span10.well
               %h2= post.heading
-              %p= post.description.to_s.html_safe
+              %p= raw(truncate post.description, :length => 200)
+              = link_to 'devamını oku', post
+              %i.icon-comment
+              %a.add_comment{:href => "#", "data-target" => "#post-comments-#{post.id}"}= "#{post.comments.count} yorum"
+              %button.btn.btn-mini.add_comment{"data-target" => "#post-comments-#{post.id}"}
+                %i.icon-plus
+                Yorum yap
+              .display_comment{:id => "post-comments-#{post.id}", :style => 'display:none'}
+                %p.comment_count
+                  %b= "#{post.comments.count} yorum"
+                .comments{:id => "comments-#{post.id}"}
+                  = render post.comments
+                .row-fluid.comment_form
+                  .span1
+                    .thumbnail
+
+                  .span11
+                    = simple_form_for(@comment, :remote => true, :html => { :class => 'form-inline validate' }) do |f|
+                      .form-inputs
+                        = f.input :post_id, :input_html => {:value => post.id}, :as => :hidden
+                        = f.input :content, :input_html => {:class => "span12 comment-input-#{post.id} comment-text", :rows => 1},:label => false, :placeholder => 'Yorum yaz', :as => :string
+
+
         %ul.thumbnails
-          = link_to(post, class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
-            %i.icon-eye-open
           = link_to(edit_post_path(post) , class: 'btn', rel: 'tooltip', title: t('tooltips.edit')) do
             %i.icon-pencil
           = link_to(post, class: 'btn', confirm: t('confirm'), method: :delete, rel: 'tooltip', title: t('tooltips.delete')) do

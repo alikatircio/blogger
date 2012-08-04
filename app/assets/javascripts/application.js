@@ -28,4 +28,17 @@ $(document).ready(function() {
     });
 
     $('[rel=html-editor]').wysihtml5();
+
+    $('.add_comment').click(function(e) {
+        e.preventDefault();
+        var target = $(this).attr("data-target");
+        if ($(this).is("button"))  {
+            $(target).show();
+            var input = $(target).find('input.comment-text');
+            input.focus().effect("highlight", {}, 300);
+        } else {
+            $(target).toggle();
+        }
+
+    });
 });
