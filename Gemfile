@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -51,6 +52,7 @@ gem "simple_form"
 gem "i18n"
 gem "bootstrap-datepicker-rails"
 gem "paperclip"
+gem 'bootstrap-wysihtml5-rails'
 group :assets do
   gem "bootstrap-sass"
   gem "compass-rails"

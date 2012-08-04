@@ -9,8 +9,7 @@
   .field
     = f.label :heading
     = f.text_field :heading
-  .field
-    = f.label :description
-    = f.text_area :description
+    = f.input :description, input_html: {rel: 'html-editor', rows: 15, :placeholder => "Birşey Yazın ...", :class => 'span12'}
+    = f.input :photo
   .actions
     = f.submit 'Save'

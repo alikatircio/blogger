@@ -5,10 +5,15 @@
     %i.icon-plus
 .container-fluid
   .row-fluid
-    .span8
+    .span8.well
       - @posts.each do |post|
-        %h2= post.heading
-        %p= post.description
+        .row-fluid
+          .span2.well
+            = image_tag post.photo
+          .row-fluid
+            .span10.well
+              %h2= post.heading
+              %p= post.description
         %ul.thumbnails
           = link_to(post, class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
             %i.icon-eye-open
@@ -17,4 +22,5 @@
           = link_to(post, class: 'btn', confirm: t('confirm'), method: :delete, rel: 'tooltip', title: t('tooltips.delete')) do
             %i.icon-trash
 
-    .span4
+
+    .span4.well

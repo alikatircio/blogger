@@ -16,6 +16,7 @@
 //= require bootstrap-datepicker
 //= require jquery.validate
 //= require jquery.validate.bootstrap
+//= require bootstrap-wysihtml5-all
 
 $(document).ready(function() {
     $('form.validate').validate();
@@ -25,4 +26,6 @@ $(document).ready(function() {
         format: 'yyyy-mm-dd'
 
     });
+
+    $('[rel=html-editor]').wysihtml5();
 });

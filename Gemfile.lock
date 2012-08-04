@@ -35,6 +35,8 @@ GEM
     bootstrap-sass (2.0.4.0)
     bootstrap-will_paginate (0.0.7)
       will_paginate
+    bootstrap-wysihtml5-rails (0.3.0)
+      railties (>= 3.0)
     builder (3.0.0)
     cancan (1.6.8)
     chunky_png (1.2.5)
@@ -159,6 +161,7 @@ DEPENDENCIES
   bootstrap-datepicker-rails
   bootstrap-sass
   bootstrap-will_paginate
+  bootstrap-wysihtml5-rails
   cancan
   coffee-rails (~> 3.2.1)
   compass-rails
