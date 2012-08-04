@@ -9,4 +9,5 @@
 
 = show_for @post do |s|
   = s.attribute :heading
-  = s.attribute :description
+  = s.attribute :description do
+    = @post.description.html_safe

@@ -13,7 +13,7 @@
   - @posts.each do |post|
     %tr
       %td= post.heading
-      %td= post.description
+      %td= post.description.to_s.html_safe
       %td
         = link_to(admins_post_path(post), class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
           %i.icon-eye-open

@@ -13,7 +13,7 @@
           .row-fluid
             .span10.well
               %h2= post.heading
-              %p= post.description
+              %p= post.description.to_s.html_safe
         %ul.thumbnails
           = link_to(post, class: 'btn', rel: 'tooltip', title: t('tooltips.show')) do
             %i.icon-eye-open
