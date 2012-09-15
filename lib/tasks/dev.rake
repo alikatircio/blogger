@@ -12,10 +12,12 @@ namespace :dev do
 
   desc "Setup seed data for development env."
   task :seed => :environment do
+=begin
     #User
     @user = User.create!(name: "Lab2023 User", email: "user@lab2023.com", password: "12341234", password_confirmation: "12341234")
     # Admin
     @admin = Admin.create!(name: "Lab2023 Admin", email: "admin@lab2023.com", password: "12341234")
+=end
 
   end
 end

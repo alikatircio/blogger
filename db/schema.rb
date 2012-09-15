@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120804131809) do
   create_table "posts", :force => true do |t|
     t.string   "heading"
     t.text     "description"
+    t.integer  "user_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "photo_file_name"
@@ -31,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20120804131809) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
   end
+
+  add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -51,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20120804131809) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.string   "authentication_token"
+    t.string   "name"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "photo_file_name"
